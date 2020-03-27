@@ -1,5 +1,13 @@
 # Ubuntu子系统安装使用
 
+## 目录
+
+- [背景](#背景)
+- [安装](#安装)
+- [使用](#使用)  
+  - [zsh](#zsh)
+  - [配置 java 环境](#配置java环境)
+
 ## 背景
 
 操作系统：windows10  
@@ -52,3 +60,36 @@ sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/to
 chsh -s /bin/zsh
 ```
 
+### 配置java环境
+
+第一步：  
+下载 jdk（笔者选择的版本为 jdk8，想选择其他版本可自行更改），下载地址：  
+http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html  
+
+选择 64 位，linux 压缩包。  
+![Linux x64 Compressed Archive	](./img/p4.png)  
+
+第二步：  
+打开 utuntu 命令行，创建 /usr/lib/jvm 文件夹，并将下载的压缩包移到此处，然后解压。  
+```
+sudo mkdir /usr/lib/jvm
+sudo mv /mnt/c/User/你的电脑用户名/Downloads/jdk-8u241-linux-x64.tar.gz /usr/lib/jvm
+sudo tar -zxvf jdk-8u241-linux-x64.tar.gz
+```
+
+第三步：  
+配置环境变量。使用命令：`sudo vim ~/.zshrc`（如果没有安装 zsh，则使用 `sudo vim ~/.bashrc`）。  
+
+在打开的文件底部添加四行命令：  
+```
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_241（如 jdk 版本与笔者不同就自行更改）
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+```
+
+
+最后执行命令：`source ~/.bashrc`（如果没有安装 zsh，则使用 `source ~/.bashrc`）使配置生效。
+
+第四步：  
+检查环境变量是否配置成功：`java -version`。
