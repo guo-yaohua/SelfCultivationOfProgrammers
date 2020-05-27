@@ -122,3 +122,36 @@ U 盘插在准备装系统的电脑上，重启。在开机瞬间摁 <kbd>F12</k
 - Sublime Text3
 
 - IDEA  
+
+
+## WindowsTerminal
+
+**（1）在 Microsoft 搜索并下载。**  
+
+<div align="center">
+<img src="./img/p5.png">
+</div>
+
+**（2）自定义属性**
+
+<div align="center">
+<img src="./img/p6.png">
+</div>  
+
+<a href="https://aka.ms/terminal-documentation">Windows Terminal官方文档</a>
+
+
+
+## 常见问题
+
+### 语言栏
+
+问题：不小心将语言栏添加在任务栏。
+<div align="center">
+<img src="./img/p3.png">
+</div>
+
+解决：设置 -> 设备 -> 输入 -> 高级键盘设置 -> 取消勾选「使用桌面语言栏」即可恢复。   
+<div align="center">
+<img src="./img/p4.png">
+</div>
