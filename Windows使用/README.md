@@ -84,10 +84,7 @@ U 盘插在准备装系统的电脑上，重启。在开机瞬间摁 <kbd>F12</k
 
 ### 解压软件
 - <a href = "https://www.7-zip.org"> 7Zip </a>  
-  体积小，好用。  
-
-- <a href = "http://www.bandisoft.com"> Bandzip </a>  
-  好用，但是经常更新。  
+  体积小，好用。
 
 ### 笔记
 - 有道云笔记  
